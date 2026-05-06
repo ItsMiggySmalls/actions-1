@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v6
 
         - name: install cosway program
-          run: sudo apt update && sudo apt install ascii
+          run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay cmd
           run: cowsay -f dragon "Run for Cover, I am a dragon.....RAWR" >> dragon.txt
