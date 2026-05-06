@@ -7,10 +7,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: checkoout repo
-          uses: actions/checkout@v4
+          uses: actions/checkout@v6
 
         - name: install cosway program
-          run: sudo apt-get install cosway -y
+          run: sudo apt install cosway -y
 
         - name: execute cowsay cmd
           run: cowsay -f dragon "Run for Cover!, I'm a dragon!.....RAWR" >> dragon.txt
