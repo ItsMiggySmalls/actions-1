@@ -12,7 +12,7 @@ jobs:
         - name: install cosway program
           run: sudo apt update && sudo apt install ascii
 
-        - name: execute cowsay cmd
+        - name: Execute Cowsay cmd
           run: cowsay -f dragon "Run for Cover, I am a dragon.....RAWR" >> dragon.txt
           
         - name: test file exists
