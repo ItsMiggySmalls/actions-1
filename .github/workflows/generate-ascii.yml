@@ -1,0 +1,25 @@
+name: Generate ASCII Artwork
+
+on: push
+
+jobs:
+    ascii_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkoout repo
+          uses: actions/checkout@v6
+
+        - name: install cosway program
+          run: sudo apt-get install cosway -y
+
+        - name: execute cowsay cmd
+          run: cowsay -f dragon "Run for Cover!, I'm a dragon!.....RAWR" >> dragon.txt
+          
+        - name: test file exists
+          run: grep -i "dragon" dragon.txt
+
+        - name: Read File
+          run: cat dragon.txt
+
+        - name: List repo files
+          run: ls -ltra
